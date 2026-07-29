@@ -1,0 +1,7 @@
+@EndUserText.label : 'Action Param for Upload Excel'
+define root abstract entity ZA_ACTION_EXCEL
+{
+    @UI.hidden:true
+    dummy : abap_boolean;
+    _StreamProperties : association[1] to ZA_EXCEL_UPLOAD on 1 = 1;
+}
