@@ -1,0 +1,6 @@
+@EndUserText.label: 'Supplier Service'
+define service Zsuppier_srv
+{
+	expose ZC_SUPPLIER_VIEW as Supplier;
+
+}
