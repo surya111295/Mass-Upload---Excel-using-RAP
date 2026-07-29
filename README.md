@@ -1,7 +1,5 @@
 # Mass-Upload---Excel-using-RAP
-Mass Upload Data from Excel Sheet into RAP Application
-
-In this Demo We see the Upload of the Excel Data into RAP 
+Mass Upload Data from Excel Sheet into RAP Application 
 
 Features : Cloud Compliant,
            100% Clean-Core,
