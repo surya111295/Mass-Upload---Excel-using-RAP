@@ -1,0 +1,24 @@
+@EndUserText.label : 'Supplier Master Data'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zsuppilermaster {
+
+  key client        : abap.clnt not null;
+  key supplier_id   : uuid not null;
+  first_name        : abap.char(50) not null;
+  last_name         : abap.char(50) not null;
+  plant_id          : abap.char(4) not null;
+  address_id        : abap.char(10) not null;
+  city              : abap.char(50) not null;
+  country           : abap.char(50) not null;
+  supplier_material : abap.char(40) not null;
+  @Semantics.amount.currencyCode : 'zsuppilermaster.supplier_currency'
+  supplier_price    : abap.curr(15,2) not null;
+  supplier_currency : abap.cuky not null;
+  created_by        : abap.char(12) not null;
+  created_at        : tzntstmpl not null;
+  changed_by        : abap.char(12) not null;
+
+}
