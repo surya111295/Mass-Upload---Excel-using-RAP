@@ -1,0 +1,24 @@
+define root abstract entity ZA_EXCEL_UPLOAD
+{
+    @Semantics.largeObject:{
+        mimeType: 'MimeType',
+        contentDispositionPreference: #INLINE,
+        fileName: 'FileName'
+    }
+@EndUserText.label: 'Select the Excel File'
+    StreamProperty : abap.rawstring(0);
+    
+    @Semantics.mimeType : true
+    @UI.hidden: true
+    MimeType : abap.char(128);
+    
+    @EndUserText.label: 'File Name'
+    @UI.hidden: true
+    FileName : abap.char(128);
+    
+    
+    
+    
+}    
+    
+
