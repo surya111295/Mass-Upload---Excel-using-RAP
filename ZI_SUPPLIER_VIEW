@@ -1,0 +1,26 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Supplier Master View'
+@Metadata.ignorePropagatedAnnotations: true
+define root view entity zi_supplier_view as select from zsuppilermaster
+{
+	key supplier_id,
+    concat_with_space(first_name, last_name, 1) as supplier_name,
+    plant_id,
+    address_id,
+    city,
+    country,
+    supplier_material,
+    @semantics.amount.currencyCode: 'supplier_currency'
+    supplier_price,
+    supplier_currency,
+    @semantics.user.createdBy: true
+    created_by,
+    @semantics.systemDateTime.createdAt: true
+    created_at,
+    @semantics.user.lastChangedBy: true
+    changed_by
+  //  @semantics.systemDateTime.lastChangedAt: true
+  //  changed_at 
+
+}
