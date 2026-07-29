@@ -15,4 +15,9 @@ Scenario : A database table created ZSUPPLIERMASTER with Supplier Details, The r
 Technique Used : RAP - Managed Scenario,
                  ODATA V4,
                  Abstract Entity with Association
-           
+
+
+<img width="2017" height="1231" alt="image" src="https://github.com/user-attachments/assets/fdac11bd-6ed9-4e8a-99b8-38bf1341c121" />
+
+
+
