@@ -1,0 +1,44 @@
+managed implementation in class zbp_i_supplier_view unique;
+strict ( 2 );
+with draft;
+define behavior for zi_supplier_view alias zb_supplier
+persistent table zsuppilermaster
+draft table zsuppilerDraft
+lock master total etag created_at
+authorization master ( instance )
+etag master created_at
+{
+  create( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly ) supplier_id;
+  static action uploadExcelData deep parameter ZA_ACTION_EXCEL;
+
+  mapping for zsuppilermaster
+  {
+    supplier_id       = supplier_id;
+    supplier_name     = first_name;
+    plant_id          = plant_id;
+    address_id        = address_id;
+    city              = city;
+    country           = country;
+    supplier_material = supplier_material;
+    supplier_price    = supplier_price;
+    supplier_currency = supplier_currency;
+    created_by        = created_by;
+    created_at        = created_at;
+    changed_by        = changed_by;
+  //  changed_at        = changed_at;
+
+  }
+
+draft action Edit;
+
+draft action Discard;
+
+draft action Activate;
+
+draft action Resume;
+
+draft determine action Prepare;
+}
