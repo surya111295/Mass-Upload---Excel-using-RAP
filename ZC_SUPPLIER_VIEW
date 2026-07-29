@@ -1,0 +1,25 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Consumption View'
+@Metadata.allowExtensions: true
+@Metadata.ignorePropagatedAnnotations: true
+define root view entity zc_supplier_view
+  provider contract transactional_query as projection on zi_supplier_view
+{
+	key supplier_id,
+    supplier_name,
+    plant_id,
+    address_id,
+    city,
+    country,
+    supplier_material,
+@EndUserText.label: 'Supplier Price'
+@Semantics.amount.currencyCode: 'supplier_currency'
+    supplier_price,
+    supplier_currency,
+    created_by,
+    created_at,
+    changed_by
+  //  changed_at
+
+}
