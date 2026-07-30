@@ -71,7 +71,7 @@ Sol :
                                          xco_cp_xlsx_read_access=>value_transformation->string_value
                                      )->execute( ).
    
-5. What is the EML statement used?
+4. What is the EML statement used?
    
 Sol : MODIFY ENTITIES OF zi_supplier_view IN LOCAL MODE
            ENTITY zb_supplier
