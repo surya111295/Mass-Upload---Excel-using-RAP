@@ -43,13 +43,13 @@ Lessons Learnt:
 
 1. When we create a behaviour definition with managed Application, create, Update button is not shown by default. How to resolve this?
    
-Sol : 1. Always create the Interface BD with Draft as mandatory when ODATA V4 is selected
-      2. Always expose the Draft with Actions on the Projection BD
+Sol : 1. Always create the Interface BD with Draft as mandatory when ODATA V4 is selected.
+      2. Always expose the Draft with Actions on the Projection BD.
       
 2. How to make the Action Button to upload the Excel ?
 
-Sol :  1. Create the File Stream Abstract Entity First
-       2. Create the Abstract Entity to link this File Stream as an association
+Sol :  1. Create the File Stream Abstract Entity First.
+       2. Create the Abstract Entity to link this File Stream as an association.
        
 3. How to use XCO library to read the data?
 Sol :
